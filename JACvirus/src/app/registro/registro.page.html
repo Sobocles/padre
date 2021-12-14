@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button>
+
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>JAC App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><ion-icon name="key"></ion-icon> Registro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="body"></ion-icon> Nombre</ion-label>
+          <ion-input formControlName="nombre" placeholder="Solo letras y numeros." maxlength="20" (keypress)="esUser($event)"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="alert"></ion-icon> Contrasena</ion-label>
+          <ion-input formControlName="password" type="password" maxlength="12" placeholder="Min:4 Max:12 caracteres."></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="alert"></ion-icon> Confirmar Contrasena</ion-label>
+          <ion-input formControlName="confirmacionPassword" type="password" maxlength="12" placeholder="Min:4 Max:12 caracteres."></ion-input>
+        </ion-item>
+        <br>
+        <ion-button color="danger" (click)="guardar()"><ion-icon name="add"></ion-icon> Registrarse</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

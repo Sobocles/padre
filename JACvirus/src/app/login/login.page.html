@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>JAC App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><ion-icon name="key"></ion-icon> Login</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="body"></ion-icon> Nombre</ion-label>
+          <ion-input formControlName="nombre" placeholder="Solo letras y numeros." maxlength="20" (keypress)="esUser($event)"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="alert"></ion-icon> Contrasena</ion-label>
+          <ion-input formControlName="password" type="password" maxlength="12" placeholder="Min:4 Max:12 caracteres."></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button outline="primary" (click)="ingresar()">
+        <ion-icon name="log-in"></ion-icon>  Ingresar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button slot="end">
+      <ion-button color ="dark" [routerLink]="['/registro']" routerLinkActive="router-link-active" >Registrarse</ion-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

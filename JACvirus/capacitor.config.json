@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "JAC-Juego",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

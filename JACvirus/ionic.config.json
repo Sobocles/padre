@@ -1,0 +1,7 @@
+{
+  "name": "JAC-Juego",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
